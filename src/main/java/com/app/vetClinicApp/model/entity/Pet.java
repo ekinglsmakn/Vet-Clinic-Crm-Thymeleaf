@@ -1,12 +1,10 @@
 package com.app.vetClinicApp.model.entity;
 
+import groovyjarjarantlr4.v4.runtime.misc.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -22,7 +20,8 @@ public class Pet extends BaseEntity {
     private String gender;
 
     // if the pet owner is deleted, the pet should also be deleted
-    @ManyToOne
+
+    @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(updatable = false)
     private PetOwner petOwner;  //a pet must have just one owner
 }

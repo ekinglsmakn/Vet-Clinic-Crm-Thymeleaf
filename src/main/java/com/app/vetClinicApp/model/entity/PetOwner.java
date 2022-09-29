@@ -22,7 +22,7 @@ public class PetOwner extends BaseEntity{
 
     // Do not delete petOwner, when pet is deleted. Because 1 petOwner can have more than one pet
     @JsonIgnore
-    @OneToMany(mappedBy = "petOwner" )
+    @OneToMany(mappedBy = "petOwner", cascade = CascadeType.ALL, fetch=FetchType.EAGER)
     private List<Pet> petList;  //one petOwner can have many pets
 
 }

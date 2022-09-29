@@ -28,29 +28,6 @@ public class PetOwnerController {
     private IPetService iPetService;
 
 
-//    @PutMapping("/updateowner")
-//    public ResponseEntity updateOwner(PetOwner owner){
-//        this.ownerService.update(owner);
-//        return new ResponseEntity("The Update Request Has Succeeded!", HttpStatus.ACCEPTED);
-//    }
-
-    @DeleteMapping("/deleteowner")
-    public ResponseEntity deleteOwner(@PathVariable Long id) {
-        this.ownerService.delete(id);
-        return new ResponseEntity("The Delete Request Has Succeeded!", HttpStatus.ACCEPTED);
-    }
-
-    @GetMapping("/getallowner")
-    public List<PetOwner> getAllOwner() {
-        return this.ownerService.getAll();
-    }
-
-    @GetMapping("/getownerbyname/{name}")
-    public List<PetOwner> getOwnersByName(@PathVariable String name) {
-        return this.ownerService.getByName(name);
-    }
-
-
     //thymeleaf methods
 
     // used to open new owner form page
@@ -59,10 +36,9 @@ public class PetOwnerController {
         //creating model attribute and new PetOwner object to bind form data
         model.addAttribute("owner", new PetOwner());
         return "newOwnerPage";
-
     }
 
-   // used for saving
+    // used for saving
     @PostMapping("/owner/save")
     public String saveOwner(@ModelAttribute("owner") PetOwner petOwner) {
         this.ownerService.save(petOwner);
@@ -71,33 +47,36 @@ public class PetOwnerController {
 
     // used to open owner listing page
     @GetMapping("/ownerpage")
-    public String getOwners(Model model) {
+    public String listOwners(Model model) {
         model.addAttribute("listOfOwners", ownerService.getAll());
         return "ownerPage";
-
     }
 
-   // used to open new owner form page for update
+    // used to open new owner form page for Update
     @GetMapping("/owners/edit/{id}")
     public String showEditOwnerForm(@PathVariable("id") Long id, Model model) {
         PetOwner owner = this.ownerService.getById(id);
-        model.addAttribute("owner",owner);
-
-        model.addAttribute("listOfPets",iPetService.getAllPets());
+        model.addAttribute("owner", owner);
+        model.addAttribute("listOfPets", iPetService.getAllPets());
         return "newOwnerPage";
 
     }
 
+    //used to open "owner detail form page" for examination table
     @GetMapping("/owners/detail/{id}")
-    public String petOwnerDetail(@PathVariable("id") Long id, Model model){
+    public String petOwnerDetail(@PathVariable("id") Long id, Model model) {
 
         PetOwner owner = this.ownerService.getById(id);
-//        List<PetOwner> owners = this.ownerService.findAllById(id);
-        model.addAttribute("owner",owner);
-
-        model.addAttribute("listOfPets",iPetService.findPetsByPetOwnerId(id));
+        model.addAttribute("owner", owner);
+        model.addAttribute("listOfPets", iPetService.findPetsByPetOwnerId(id));
         return "ownerDetailPage";
     }
 
+
+    @GetMapping("/owners/delete/{id}")
+    public String deleteOwner(@PathVariable("id") Long id, Model model) {
+        ownerService.deleteById(id);
+        return "redirect:/ownerpage";
+    }
 
 }

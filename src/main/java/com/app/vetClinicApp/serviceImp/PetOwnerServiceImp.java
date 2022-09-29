@@ -32,7 +32,7 @@ public class PetOwnerServiceImp implements IPetOwnerService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public void delete(Long id) {
+    public void deleteById(Long id) {
         this.iPetOwnerRepository.deleteById(id);
     }
 
@@ -41,7 +41,6 @@ public class PetOwnerServiceImp implements IPetOwnerService {
     public List<PetOwner> getAll() {
         return this.iPetOwnerRepository.findAll();
     }
-
 
     @Transactional(readOnly = true)
     @Override
@@ -60,5 +59,9 @@ public class PetOwnerServiceImp implements IPetOwnerService {
     public List<PetOwner> findAllById(Long id){
         return iPetOwnerRepository.findAllById(Collections.singleton(id));
     }
+
+
+
+
 }
 

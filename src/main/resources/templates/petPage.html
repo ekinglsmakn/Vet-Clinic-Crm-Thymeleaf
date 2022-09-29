@@ -44,9 +44,9 @@
                         <td th:text="${pet.breed}"></td>
                         <td th:text="${pet.gender}"></td>
                         <td th:text="${pet.age}"></td>
-                        <td><a th:href="@{/petdetails}" class="btn btn-primary" >İncele</a></td>
+                        <td><a th:href="@{'/pet/petdetail/' +${pet.id}}" class="btn btn-primary" >İncele</a></td>
                         <td><a th:href="@{'/pets/edit/' + ${pet.id}}" class="btn btn-primary" style="background-color: lightseagreen">Güncelle</a></td>
-                        <td><a class="btn btn-primary" style="background-color: palevioletred; padding-right: 20px; padding-left: 20px"> Sil</a></td>
+                        <td><a th:href="@{'/pets/delete/' + ${pet.id}}" class="btn btn-primary" style="background-color: palevioletred; padding-right: 20px; padding-left: 20px"> Sil</a></td>
             <tr>
         </tbody>
     </table>

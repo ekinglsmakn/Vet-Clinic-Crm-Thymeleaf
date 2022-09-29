@@ -7,9 +7,10 @@ import java.util.Optional;
 public interface IPetOwnerService {
     PetOwner save(PetOwner owner);
     PetOwner update(PetOwner owner);
-    void delete(Long id);
+    void deleteById(Long id);
     List<PetOwner> getAll();
     List<PetOwner> getByName(String name);
     PetOwner getById(Long id);
     List<PetOwner> findAllById(Long id);
+
 }

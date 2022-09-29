@@ -10,5 +10,6 @@ import java.util.List;
 public interface IPetOwnerRepository extends JpaRepository<PetOwner, Long> {
 
     List<PetOwner> findPetOwnerByName(String name);
+
 }
 
