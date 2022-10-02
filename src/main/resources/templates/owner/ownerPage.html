@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html  xmlns:th="https://www.thymeleaf.org">
-<head th:replace="ownerFragment :: html_head">
+<head th:replace="fragments/ownerFragment :: html_head">
     <meta charset="UTF-8">
     <title>Evcil Hayvan Sahibi Lsitesi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -9,7 +9,7 @@
           crossorigin="anonymous">
 </head>
 <body>
-<div th:replace="ownerFragment :: searchMenu"></div>
+<div th:replace="fragments/ownerFragment :: searchMenu"></div>
     <div class="container">
         <div>
             <div>
@@ -53,6 +53,6 @@
         <hr>
 
     </div>
-    <div th:replace="ownerFragment :: footer"></div>
+    <div th:replace="fragments/ownerFragment :: footer"></div>
 </body>
 </html>

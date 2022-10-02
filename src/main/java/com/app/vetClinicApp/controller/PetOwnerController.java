@@ -63,13 +63,14 @@ public class PetOwnerController {
         return "owner/ownerDetailPage";
     }
 
-
+    //used to delete pet by id
     @GetMapping("/owners/delete/{id}")
     public String deleteOwner(@PathVariable("id") Long id, Model model) {
         ownerService.deleteById(id);
         return "redirect:/owner/ownerlistpage";
     }
 
+    //used to search Owner by name
     @GetMapping("/owner/search")
     public String getByName(String name, Model model){
         if(name!=null){

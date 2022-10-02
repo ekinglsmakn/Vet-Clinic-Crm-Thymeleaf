@@ -24,12 +24,14 @@ public class PetController {
     @Autowired
     private IPetOwnerService ownerService;
 
+    //is the save method
     @PostMapping("/pet/save")
     public String savePet(@ModelAttribute("pet") Pet pet) {
         this.iPetService.save(pet); //save pet to dataBase
         return "redirect:/pet/petlistpage";
     }
 
+    //opens the form page for adding a new pet
     @GetMapping("/pet/new")
     public String showNewPetForm(Model model) {
         //creating mode attribute to bind form data
@@ -70,6 +72,7 @@ public class PetController {
         }
     }
 
+    //used to delete pet by id
     @GetMapping("/pet/delete/{id}")
     public String deletePet(@PathVariable("id") Long id, Model model) {
         iPetService.deleteById(id);
@@ -77,17 +80,14 @@ public class PetController {
 
     }
 
+    //used to search Pet by name
     @GetMapping("/pet/search")
     public String getByName(String name, Model model){
-
         if(name!=null){
             model.addAttribute("listOfPets",iPetService.getPetsByName(name));
         }else{
             model.addAttribute("listOfPets",iPetService.getAllPets());
         }
         return "pet/searchPetPage";
-
     }
-
-
 }
