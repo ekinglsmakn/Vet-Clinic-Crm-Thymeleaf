@@ -45,7 +45,7 @@ public class PetOwnerServiceImp implements IPetOwnerService {
     @Transactional(readOnly = true)
     @Override
     public List<PetOwner> getByName(String name) {
-        return this.iPetOwnerRepository.findPetOwnerByName(name);
+        return this.iPetOwnerRepository.findPetOwnersByNameIgnoreCase(name);
     }
 
     @Transactional(readOnly = true)

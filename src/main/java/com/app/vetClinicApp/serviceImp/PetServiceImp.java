@@ -25,12 +25,6 @@ public class PetServiceImp implements IPetService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public Pet update(Pet pet) {
-        return this.iPetRepository.save(pet);
-    }
-
-    @Transactional(rollbackFor = Exception.class)
-    @Override
     public void deleteById(Long id) {
         iPetRepository.deleteById(id);
     }
@@ -41,17 +35,17 @@ public class PetServiceImp implements IPetService {
         return (List<Pet>) this.iPetRepository.findAll();
     }
 
+    //get pets by "name" keyword
     @Transactional(readOnly = true)
     @Override
-    public List<Pet> getPetsByName(String name) {
-        return this.iPetRepository.findPetByName(name);
+    public List<Pet> getPetsByName(String petname) {
+        return this.iPetRepository.findPetsByNameIgnoreCase(petname);
     }
 
     @Override
     public List<Pet> findPetsByPetOwnerId(Long id) {
-        return iPetRepository.findPetsByPetOwnerId(id);
+        return this.iPetRepository.findPetsByPetOwnerId(id);
     }
-
 
     @Override
     public Pet getById(Long id) {

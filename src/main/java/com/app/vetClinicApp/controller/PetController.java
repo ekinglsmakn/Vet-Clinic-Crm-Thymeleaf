@@ -24,37 +24,37 @@ public class PetController {
     @Autowired
     private IPetOwnerService ownerService;
 
-    @PostMapping("/savepet")
+    @PostMapping("/pet/save")
     public String savePet(@ModelAttribute("pet") Pet pet) {
         this.iPetService.save(pet); //save pet to dataBase
-        return "redirect:/petpage";
+        return "redirect:/pet/petlistpage";
     }
 
-    @GetMapping("/shownewpetform")
+    @GetMapping("/pet/new")
     public String showNewPetForm(Model model) {
         //creating mode attribute to bind form data
         Pet pet = new Pet();
         model.addAttribute("pet", pet);
         List<PetOwner> petOwnerList = ownerService.getAll();
         model.addAttribute("ownerList", petOwnerList);
-        return "newPetPage";
+        return "pet/newPetPage";
     }
 
     //used to list Pets in a table
-    @GetMapping("/petpage")
+    @GetMapping("/pet/petlistpage")
     public String getPets(Model model) {
         model.addAttribute("listOfPets", iPetService.getAllPets());
-        return "petPage"; //name of html page
+        return "pet/petPage"; //name of html page
     }
 
     // used to open "newOwnerPage Form" for update
-    @GetMapping("/pets/edit/{id}")
+    @GetMapping("/pet/edit/{id}")
     public String showEditPetForm(@PathVariable("id") Long id, Model model) {
         Pet pet = iPetService.getById(id);
         model.addAttribute("pet", pet);
         List<PetOwner> petOwnerList = ownerService.getAll();
         model.addAttribute("ownerList", petOwnerList);
-        return "newPetPage";
+        return "pet/newPetPage";
     }
 
     //used to list Pet Details (owners and some columns) in table
@@ -62,19 +62,30 @@ public class PetController {
     public String petDetail(@PathVariable("id") Long id, Model model) {
         Pet pet = iPetService.getById(id);
         model.addAttribute("pets", pet);
+
         if(pet.getPetOwner()==null){
-            return "petDetailNullPage";
+            return "pet/petDetailNullPage";
         }else{
-            return "petDetailsPage"; //name of html page
+            return "pet/petDetailsPage"; //name of html page
         }
+    }
+
+    @GetMapping("/pet/delete/{id}")
+    public String deletePet(@PathVariable("id") Long id, Model model) {
+        iPetService.deleteById(id);
+        return "redirect:/pet/petlistpage";
 
     }
 
+    @GetMapping("/pet/search")
+    public String getByName(String name, Model model){
 
-    @GetMapping("/pets/delete/{id}")
-    public String deletePet(@PathVariable("id") Long id, Model model) {
-        iPetService.deleteById(id);
-        return "redirect:/petpage";
+        if(name!=null){
+            model.addAttribute("listOfPets",iPetService.getPetsByName(name));
+        }else{
+            model.addAttribute("listOfPets",iPetService.getAllPets());
+        }
+        return "pet/searchPetPage";
 
     }
 

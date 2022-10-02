@@ -1,20 +1,14 @@
 package com.app.vetClinicApp.controller;
 
-import com.app.vetClinicApp.model.entity.Pet;
 import com.app.vetClinicApp.model.entity.PetOwner;
 import com.app.vetClinicApp.service.IPetOwnerService;
 import com.app.vetClinicApp.service.IPetService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
 
 @Controller
 @Getter
@@ -27,29 +21,26 @@ public class PetOwnerController {
     @Autowired
     private IPetService iPetService;
 
-
-    //thymeleaf methods
-
     // used to open new owner form page
     @GetMapping("/owner/new")
     public String showNewOwnerForm(Model model) {
         //creating model attribute and new PetOwner object to bind form data
         model.addAttribute("owner", new PetOwner());
-        return "newOwnerPage";
+        return "/owner/newOwnerPage";
     }
 
     // used for saving
     @PostMapping("/owner/save")
     public String saveOwner(@ModelAttribute("owner") PetOwner petOwner) {
         this.ownerService.save(petOwner);
-        return "redirect:/ownerpage";
+        return "redirect:/owner/ownerlistpage";
     }
 
     // used to open owner listing page
-    @GetMapping("/ownerpage")
+    @GetMapping("/owner/ownerlistpage")
     public String listOwners(Model model) {
         model.addAttribute("listOfOwners", ownerService.getAll());
-        return "ownerPage";
+        return "owner/ownerPage";
     }
 
     // used to open new owner form page for Update
@@ -58,7 +49,7 @@ public class PetOwnerController {
         PetOwner owner = this.ownerService.getById(id);
         model.addAttribute("owner", owner);
         model.addAttribute("listOfPets", iPetService.getAllPets());
-        return "newOwnerPage";
+        return "owner/newOwnerPage";
 
     }
 
@@ -69,14 +60,23 @@ public class PetOwnerController {
         PetOwner owner = this.ownerService.getById(id);
         model.addAttribute("owner", owner);
         model.addAttribute("listOfPets", iPetService.findPetsByPetOwnerId(id));
-        return "ownerDetailPage";
+        return "owner/ownerDetailPage";
     }
 
 
     @GetMapping("/owners/delete/{id}")
     public String deleteOwner(@PathVariable("id") Long id, Model model) {
         ownerService.deleteById(id);
-        return "redirect:/ownerpage";
+        return "redirect:/owner/ownerlistpage";
     }
 
+    @GetMapping("/owner/search")
+    public String getByName(String name, Model model){
+        if(name!=null){
+            model.addAttribute("listOfOwners",ownerService.getByName(name));
+        }else{
+            model.addAttribute("listOfOwners",ownerService.getAll());
+        }
+        return "owner/searchOwnerPage";
+    }
 }

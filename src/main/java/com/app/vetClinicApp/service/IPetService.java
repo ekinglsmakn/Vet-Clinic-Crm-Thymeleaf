@@ -7,10 +7,9 @@ import java.util.List;
 
 public interface IPetService {
     Pet save(Pet pet);
-    Pet update(Pet pet);
     void deleteById(Long id);
     List<Pet> getAllPets();
-    List<Pet> getPetsByName(String name);
+    List<Pet> getPetsByName(String petname);
     List<Pet> findPetsByPetOwnerId(Long id);
     Pet getById(Long id);
 
