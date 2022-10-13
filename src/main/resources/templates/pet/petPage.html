@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html  xmlns:th="https://www.thymeleaf.org">
+<html  xmlns:th="https://www.thymeleaf.org"
+       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head th:replace="fragments/petFragment :: html_head">
     <meta charset="UTF-8">
     <title>Evcil Hayvan Listesi</title>
@@ -15,8 +16,10 @@
 
 
 <div class="container">
-    <div>
-        <h3 style="text-align: left; padding-top: 12px; padding-bottom: 3px">Evcil Hayvan Listesi</h3><hr>
+    <h3 style="text-align: left; padding-top: 12px; padding-bottom: 3px">Evcil Hayvan Listesi</h3><hr>
+
+    <div sec:authorize="hasAnyAuthority('ADMIN')">
+
         <a th:href="@{/pet/new}" class="btn btn-primary">Kayıt Ekle</a>
     </div>
     <br>
@@ -43,9 +46,30 @@
                         <td th:text="${pet.breed}"></td>
                         <td th:text="${pet.gender}"></td>
                         <td th:text="${pet.age}"></td>
-                        <td><a th:href="@{'/pet/petdetail/' +${pet.id}}" class="btn btn-primary" >İncele</a></td>
-                        <td><a th:href="@{'/pet/edit/' + ${pet.id}}" class="btn btn-primary" style="background-color: lightseagreen">Güncelle</a></td>
-                        <td><a th:href="@{'/pet/delete/' + ${pet.id}}" class="btn btn-primary" style="background-color: palevioletred; padding-right: 20px; padding-left: 20px"> Sil</a></td>
+                <td>
+                    <div sec:authorize="hasAnyAuthority('ADMIN','USER')">
+                        <a th:href="@{'/pet/petdetail/' +${pet.id}}" class="btn btn-primary">
+                            İncele
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div sec:authorize="hasAnyAuthority('ADMIN')">
+                        <a th:href="@{'/pet/edit/' + ${pet.id}}" class="btn btn-primary">
+                            Güncelle
+                        </a>
+                    </div>
+                </td>
+                <td>
+                    <div sec:authorize="hasAnyAuthority('ADMIN')">
+                        <a th:href="@{'/pet/delete/' + ${pet.id}}" class="btn btn-primary">
+                            Sil
+                        </a>
+                    </div>
+                </td>
+<!--                        <td><a th:href="@{'/pet/petdetail/' +${pet.id}}" class="btn btn-primary" >İncele</a></td>-->
+<!--                        <td><a th:href="@{'/pet/edit/' + ${pet.id}}" class="btn btn-primary" style="background-color: lightseagreen">Güncelle</a></td>-->
+<!--                        <td><a th:href="@{'/pet/delete/' + ${pet.id}}" class="btn btn-primary" style="background-color: palevioletred; padding-right: 20px; padding-left: 20px"> Sil</a></td>-->
             <tr>
         </tbody>
     </table>

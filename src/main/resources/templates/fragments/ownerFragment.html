@@ -32,6 +32,10 @@
                 <li class="nav-item active">
                     <a class="nav-link" th:href="@{/owner/ownerlistpage}">Sahip Listesi </a>
                 </li>
+                &emsp;&emsp;
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/aboutus}">Hakkımızda</a>
+                </li>
             </ul>&emsp;&emsp;
 
             <form class="form-inline my-2 my-lg-0" th:action="@{/owner/search}" method="get">
@@ -39,11 +43,11 @@
                        type="text" placeholder="Enter A Owner Name" aria-label="Search" name="name"
                        style="width: 200px; margin-left:30px; display: inline-block;">
 
-                <button class="btn btn-warning" type="submit" style="width:50px;" >Ara</button>
+                <button class="btn btn-warning" type="submit" style="width:60px;" >Ara</button>
             </form>
 
             &emsp;&emsp;
-            <div class="nav-item active" style="margin-left: 500px">
+            <div class="nav-item active" style="margin-left: 380px">
                 <form th:action="@{/logout}" method="post">
                     <input type="submit" class="btn btn-danger" value="Çıkış" />
                 </form>
