@@ -31,15 +31,25 @@
                 <li class="nav-item active">
                     <a class="nav-link" th:href="@{/owner/ownerlistpage}">Sahip Listesi </a>
                 </li>
+                &emsp;&emsp;
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/aboutus}">Hakkımızda</a>
+                </li>
+                &emsp;&emsp;
+                <li class="nav-item active" style="margin-left: 700px">
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" class="btn btn-danger" value="Çıkış" />
+                    </form>
+                </li>
+
             </ul>
-            <input class="btn btn-danger" type="button" value="Çıkış"style="margin-left: 860px; margin-bottom: 5px">
         </div>
     </nav>
 </div>
-    <footer class="footer" th:fragment="footer">
-        <div class="text-center">
-            <p>Vet Clinic App Control Panel - Copyright &copy; Ekin Gülsüm Akın</p>
-        </div>
-    </footer>
+<footer class="footer" th:fragment="footer">
+    <div class="text-center">
+        <p>Vet Clinic App Control Panel - Copyright &copy; Ekin Gülsüm Akın</p>
+    </div>
+</footer>
 </body>
 </html>

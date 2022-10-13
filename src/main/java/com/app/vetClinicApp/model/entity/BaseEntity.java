@@ -15,7 +15,7 @@ public class BaseEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private boolean isActive = true; //used for deletion
+    private boolean enabled = true; //default value
 
 
 }

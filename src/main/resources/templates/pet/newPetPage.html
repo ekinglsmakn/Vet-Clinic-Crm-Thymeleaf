@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-<head th:replace="mainFragment :: html_head">
+<head th:replace="fragments/petFragment :: html_head">
     <meta charset="UTF-8">
     <title>Evcil Hayvan Ekle</title>
 
@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<div th:replace="petFragment :: searchMenu"></div>
+<div th:replace="fragments/petFragment :: searchMenu"></div><br>
 
     <div class="container">
         <div  th:if="${pet.id==null}"><h3 style="color: darkcyan; text-align: center">Yeni Evcil Hayvan Ekle</h3></div>
@@ -81,6 +81,6 @@
 
     </div>
 <br><hr><br>
-<div th:replace="petFragment :: footer"></div>
+<div th:replace="fragments/petFragment :: footer"></div>
 </body>
 </html>

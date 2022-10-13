@@ -41,8 +41,13 @@
 
         <button class="btn btn-warning" type="submit" style="width:50px;" >Ara</button>
       </form>
+      &emsp;&emsp;
+      <div class="nav-item active" style="margin-left: 500px">
+        <form th:action="@{/logout}" method="post">
+          <input type="submit" class="btn btn-danger" value="Çıkış" />
+        </form>
+      </div>
 
-      <input class="btn btn-danger" type="button" value="Çıkış" style="margin-left: 550px; margin-bottom: 5px">
     </div>
   </nav>
 </div>

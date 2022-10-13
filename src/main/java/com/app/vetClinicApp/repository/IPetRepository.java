@@ -12,6 +12,7 @@ import java.util.List;
 
 @Repository
 public interface IPetRepository extends JpaRepository<Pet, Long> {
+
     List<Pet> findPetsByNameIgnoreCase(@Param("name") String name);
     List<Pet> findPetsByPetOwnerId(Long id);
 }

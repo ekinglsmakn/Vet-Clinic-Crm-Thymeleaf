@@ -60,7 +60,7 @@ public class PetOwnerController {
         PetOwner owner = this.ownerService.getById(id);
         model.addAttribute("owner", owner);
         model.addAttribute("listOfPets", iPetService.findPetsByPetOwnerId(id));
-        return "owner/ownerDetailPage";
+        return "owner/ownerDetailsPage";
     }
 
     //used to delete pet by id

@@ -16,7 +16,6 @@ import java.util.List;
 @Controller
 @Getter
 @Setter
-
 public class PetController {
 
     @Autowired
@@ -66,7 +65,7 @@ public class PetController {
         model.addAttribute("pets", pet);
 
         if(pet.getPetOwner()==null){
-            return "pet/petDetailNullPage";
+            return "pet/petDetailsNullPage";
         }else{
             return "pet/petDetailsPage"; //name of html page
         }
