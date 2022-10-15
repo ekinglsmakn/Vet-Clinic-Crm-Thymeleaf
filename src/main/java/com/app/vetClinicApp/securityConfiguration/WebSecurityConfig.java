@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
@@ -42,18 +41,31 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/").hasAnyAuthority("USER","ADMIN")  //homepage
-//                .antMatchers("/new").hasAnyAuthority("ADMIN", "CREATOR")
-//                .antMatchers("/edit/**").hasAnyAuthority("ADMIN", "EDITOR")
-//                .antMatchers("/deleteproduct/**").hasAuthority("ADMIN")
-                .anyRequest().authenticated()
+        String[] staticResources  =  {
+                "/css/**",
+                "/images/**",
+                "/fonts/**",
+                "/scripts/**",
+        };
+
+        http
+                .authorizeRequests()
+                    .antMatchers("/").hasAnyAuthority("USER","ADMIN")  //homepage
+    //                .antMatchers("/new").hasAnyAuthority("ADMIN", "CREATOR")
+    //                .antMatchers("/edit/**").hasAnyAuthority("ADMIN", "EDITOR")
+    //                .antMatchers("/deleteproduct/**").hasAuthority("ADMIN")
+                    .antMatchers(staticResources).permitAll()
+                    .anyRequest().authenticated()
                 .and()
-                .formLogin().permitAll()
+                .formLogin()
+                    .loginPage("/login")
+                    .usernameParameter("email")
+                    .permitAll()
                 .and()
                 .logout().permitAll()
                 .and()
-                .exceptionHandling().accessDeniedPage("/403")
+                    .exceptionHandling()
+                    .accessDeniedPage("/403")
         ;
     }
 }

@@ -1,5 +1,8 @@
 package com.app.vetClinicApp.controller;
 
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -23,7 +26,11 @@ public class CommonController {
     }
 
     @GetMapping("/login")
-    public String showLoginPage() {
-        return "loginPage";
+    public String showLoginPage(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if(authentication==null || authentication instanceof AnonymousAuthenticationToken){
+            return "loginPage";
+        }
+        return "redirect:/";
     }
 }

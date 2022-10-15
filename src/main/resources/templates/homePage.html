@@ -21,7 +21,7 @@
     <h1 style="font-family: 'Comic Sans MS'; color: crimson;">Vet Clinic CRM</h1><br><br><br>
 </div><br>
 
-<div align="center" style="margin-bottom: 110px">
+<div align="center" style="margin-bottom: 90px">
     <div sec:authorize="isAuthenticated()">
 
         <h4>Welcome "<b><span sec:authentication="name">Username</span></b>" !</h4>
@@ -31,8 +31,7 @@
     </div>
 </div>
 
-<hr>
-<br>
+
 <div th:replace="fragments/mainFragment::footer" ></div>
 </body>
 </html>

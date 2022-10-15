@@ -36,7 +36,11 @@
                     <a class="nav-link" th:href="@{/aboutus}">Hakkımızda</a>
                 </li>
                 &emsp;&emsp;
-                <li class="nav-item active" style="margin-left: 700px">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/user/listusers}">Kullanıcılar</a>
+                </li>
+                &emsp;&emsp;
+                <li class="nav-item active" style="margin-left: 560px">
                     <form th:action="@{/logout}" method="post">
                         <input type="submit" class="btn btn-danger" value="Çıkış" />
                     </form>
@@ -48,6 +52,9 @@
 </div>
 <footer class="footer" th:fragment="footer">
     <div class="text-center">
+        <br>
+        <hr>
+        <br>
         <p>Vet Clinic App Control Panel - Copyright &copy; Ekin Gülsüm Akın</p>
     </div>
 </footer>

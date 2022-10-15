@@ -36,17 +36,21 @@
         <li class="nav-item active">
           <a class="nav-link" th:href="@{/aboutus}">Hakkımızda</a>
         </li>
+        &emsp;&emsp;
+        <li class="nav-item active">
+          <a class="nav-link" th:href="@{/user/listusers}">Kullanıcılar</a>
+        </li>
       </ul>&emsp;&emsp;
 
       <form class="form-inline my-2 my-lg-0" th:action="@{/pet/search}" method="get">
         <input class="form-control mr-sm-2"
-               type="text" placeholder="Enter A Pet Name" aria-label="Search" name="name"
+               type="text" placeholder="Hayvan Adı Giriniz" aria-label="Search" name="name"
                style="width: 200px; margin-left:30px; display: inline-block;">
 
-        <button class="btn btn-warning" type="submit" style="width:60px;" >Ara</button>
+        <button class="btn btn-warning" type="submit" style="width:60px; margin-bottom: 3px" >Ara</button>
       </form>
       &emsp;&emsp;
-      <div class="nav-item active" style="margin-left: 380px">
+      <div class="nav-item active" style="margin-left: 267px">
         <form th:action="@{/logout}" method="post">
           <input type="submit" class="btn btn-danger" value="Çıkış" />
         </form>
@@ -59,6 +63,9 @@
 
 <footer class="footer" th:fragment="footer">
   <div class="text-center">
+    <br>
+    <hr>
+    <br>
     <p>Vet Clinic App Control Panel - Copyright &copy; Ekin Gülsüm Akın</p>
   </div>
 </footer>
