@@ -11,59 +11,51 @@
 </head>
 <body>
 <div th:replace="fragments/mainFragment :: menu"></div>
+
+<div class="container-fluid">
 <br>
+    <div  th:if="${user.id==null}"><h3 style="color: darkblue; text-align: center">Yeni Kullanıcı Ekle</h3></div>
+    <div  th:unless="${user.id==null}"><h3 style="color: darkblue; text-align: center"> Kullanıcı Güncelle</h3></div>
+    <div class="border border-secondary p-3 rounded">
+        <img th:src="@{/images/personicon.png}" th:width="50" th:height="70" style="margin-left: 700px"/>
 
-<div class="container">
-    <div  th:if="${user.id==null}"><h3 style="color: darkcyan; text-align: center">Yeni Kullanıcı Ekle</h3></div>
-    <div  th:unless="${user.id==null}"><h3 style="color: darkcyan; text-align: center"> Kullanıcı Güncelle</h3></div>
+        <form th:action="@{/user/save}" th:object="${user}" method="POST" style="max-width: 500px; margin: 0 auto;">
+                    <input type="hidden" th:field="*{id}" th:value="${user.id}">
+                    <div class="form-group">
+                        <label for="uName">Kullanıcı Adı</label>
+                        <input id="uName" type="text" th:field="*{username}" placeholder="userName" class="form-control mb-4 col-4" required>
+                    </div>
 
-    <hr>
-    <br>
+                    <div class="form-group">
+                        <label for="email">E-Posta</label>
+                        <input id="email" type="text" th:field="*{email}"  placeholder="e-posta" class="form-control mb-4 col-4" required>
+                    </div>
 
-    <form action="#" th:action="@{/user/save}" th:object="${user}" method="POST">
-        <input type="hidden" th:field="*{id}" th:value="${user.id}">
-        <div class="form-group">
-            <label for="uName">Kullanıcı Adı</label>
-            <input id="uName" type="text" th:field="*{username}" placeholder="userName" class="form-control mb-4 col-4" required>
-        </div>
+                    <div class="form-group">
+                        <label for="password">Parola</label>
+                        <input id="password" type="text" th:field="*{password}" placeholder="parola" class="form-control mb-4 col-4">
+                    </div>
 
-        <div class="form-group">
-            <label for="email">E-Posta</label>
-            <input id="email" type="text" th:field="*{email}"  placeholder="e-posta" class="form-control mb-4 col-4" required>
-        </div>
+                    <div class="form-group">
+                        <div><label>Rol Seçiniz</label></div>
+                        <div>
+                            <select th:field="*{roles}" class="form-control">
+                                <option th:value="0"  selected="selected" >Lütfen Rol Seçiniz</option>
 
-        <div class="form-group">
-            <label for="password">Parola</label>
-            <input id="password" type="text" th:field="*{password}" placeholder="parola" class="form-control mb-4 col-4">
-        </div>
-
-        <div class="form-group">
-            <label for="checked" class="form-check-label"> False </label>
-            <input id="checked" class="form-check-label" type="checkbox" value="False"  th:field="*{enable}" >
-        </div>
-        <div class="form-group" class="form-check-label">
-            <label for="checked2"> True </label>
-            <input id="checked2" class="form-check-label" type="checkbox" value="True"  checked th:field="*{enable}" >
-        </div>
-
-        <div class="form-group">
-            <div><label>Rol Seçiniz</label></div><br>
-            <div >
-                <select th:field="*{roles}" class="form-control" required="true" >
-                    <option th:value="0"  selected="selected" >Lütfen Sahip seçiniz</option>
-                    <th:block th:each="rol : ${roleList}" >
-                        <option  th:text="${rol.rolename}" />
-                    </th:block>
-                </select>
-            </div>
-        </div><br>
-
-        <button type="submit" class="btn btn-info col-2" >KAYDET</button>
-        <a class="btn btn-info col-2"
-           style="background-color: crimson; margin-left: 856px; color: #F2F3F4 "
-           th:href="@{/}">VAZGEÇ</a>
-    </form>
-
+                                <th:block th:each="rol : ${roleList}" >
+                                    <option  th:text="${rol.rolename}" th:value="${rol.id}"></option>
+                                </th:block>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-info col-2" >KAYDET</button>
+                    <a class="btn btn-info col-2"
+                       style="background-color: crimson; margin-left: 325px; color: #F2F3F4 "
+                       th:href="@{/}">VAZGEÇ</a>
+        </form>
+    </div>
 <div th:replace="fragments/mainFragment::footer" ></div>
+</div>
 </body>
 </html>

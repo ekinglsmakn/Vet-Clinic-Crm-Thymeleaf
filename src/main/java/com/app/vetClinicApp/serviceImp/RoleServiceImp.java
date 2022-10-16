@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class RoleServiceImp implements IRolesService {
@@ -17,7 +16,7 @@ public class RoleServiceImp implements IRolesService {
 
 
     @Override
-    public Set<Role> getAll() {
-        return (Set<Role>) this.roleRepository.findAll();
+    public List<Role> getAll() {
+        return this.roleRepository.findAll();
     }
 }
