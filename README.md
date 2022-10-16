@@ -46,7 +46,7 @@
  
  <h3>Login Sayfası</h3>
  <p>Spring Security'nin sağladığı default login sayfası customize edilerek aşağıdaki Login Sayfası oluşturulmuştur. Bu sayfaya uygulama ayağa kaldırıldıktan sonra web browser üzerinden <i><b>"http://localhost:8080/login"</b></i> url'i ile ulaşılabilmektedir.</p>
- <img src="https://user-images.githubusercontent.com/36645298/196038614-c3c8b7ca-8767-4932-ada8-8a3f699be978.png" width="960" height="520" />
+ <img src="https://user-images.githubusercontent.com/36645298/196038614-c3c8b7ca-8767-4932-ada8-8a3f699be978.png" width="970" height="520" />
  <p>Spring Security ayarları için öncelikle <i>"pom.xml"</i> içine gerekli dependency'ler eklenmelidir. Gerekli configurasyon ayarları <i>"SecurityConfiguration"</i> klasörü altında <i>"WebSecurityConfig"</i> classı içinde yapılmıştır.</p>
  
  <hr/>
@@ -56,7 +56,7 @@
  
  :diamonds: <b>Admin</b> rolüne sahip kullanıcının giriş yaptığı ana sayfa
  
-  <img src="https://user-images.githubusercontent.com/36645298/196039342-8b42d0d9-2eb2-4c20-8c68-cb28aac8f520.png" width="960" height="520" /><br><br>
+  <img src="https://user-images.githubusercontent.com/36645298/196039342-8b42d0d9-2eb2-4c20-8c68-cb28aac8f520.png" width="970" height="520" /><br><br>
 
   :diamonds: <b>User</b> rolüne sahip kullanıcının giriş yaptığı ana sayfa
   
