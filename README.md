@@ -2,6 +2,20 @@
  <h2><b>Vet Clinic CRM </b></h2>
 <p>Bu proje veteriner klinik işlemleri için geliştirilmiştir. Rol tabanlı bir yetkilendirme yapısı bulunmaktadır. Tanımlanan yetkiye göre sisteme, evcil hayvan sahibi veya evcil hayvan eklenebilmektedir. Var olan kayıtlar üzerinde güncelleme yapılabilir, silinebilir ve incelenebilir. Ayrıca evcil hayvan adı ya da hayvan sahibi adı üzerinden arama yapılabilmektedir. Uygulama 8080 portunda çalışmaktadır</p>
 
+<h4>Uygulamada Kullanılan Teknolojiler</h4>
+<ul>
+   <li>Java Spring Boot</li>
+   <li>Spring Security</li>
+   <li>Spring Data JPA</li>
+   <li>Maven Plugin</li>
+   <li>PostgreSql</li>
+   <li>Thymeleaf</li>
+   <li>Bootstrap</li>
+   <li>Html/Css</li>
+   <li>Hibernate</li>
+ </ul>
+ <hr>
+
  
 &emsp;&emsp;:diamonds:  Projede PostgreSql Veri Tabanı kullanılmıştır. ER Diyagramı aşağıdaki gibidir.
  
