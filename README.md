@@ -86,17 +86,18 @@
    &emsp;<p> :diamonds: Eğer evcil hayvan eklenmiş fakat sahip ataması yapılmamışsa (sistemde sahipsiz görünüyorsa) incele butonuna tıklandığında aşağıdaki sayfa görüntülenecektir. </p>
    <img src="https://user-images.githubusercontent.com/36645298/196046183-9eb73ab5-48ca-4bbb-bda8-88584c8d6e15.png" width="960" height="500" /><hr>
    
-  &emsp;<p> :diamonds:Yeni Evcil Hayvan Oluşturma </p>
-    <img src="https://user-images.githubusercontent.com/36645298/196047259-b64e2147-2537-46f1-866a-77ada6f29179.png" width="960" height="500" /><hr>
+  &emsp;<p> :diamonds:Yeni Evcil Hayvan Oluşturma </p><p>JPA save methodu ile oluşturulan kaydetme işlemidir.Form içerisinde evcil hayvan bilgileri alındıktan sonra <i>PetOwner</i> bilgileri açılır menu içerisinde listelenip sahip seçimi yapılmaktadır. Seçilen Sahibin id'si <i>Pet</i> tablosunda foreign key olduğu için evcil hayvanın sahibi de atanmış olmaktadır.</p>
+  
+   <img src="https://user-images.githubusercontent.com/36645298/196047259-b64e2147-2537-46f1-866a-77ada6f29179.png" width="960" height="500" /><hr>
     
-    
-  &emsp;<p> :diamonds:Var Olan Evcil Hayvanı Güncelleme</p>
+  &emsp;<p> :diamonds:Var Olan Evcil Hayvanı Güncelleme</p><p>Güncellenecek olan data seçildiğinde id'sine göre veri tabanında bir karşılaştırma yapılır ve yeni veriler JPA save methodu ile tekrar kaydedilir</p>
     <img src="https://user-images.githubusercontent.com/36645298/196047311-6ed1de6e-464e-4836-ad44-8b72350c5906.png" width="960" height="500" /><hr>
     
-  &emsp;<p> :diamonds:Yeni Sahip Oluşturma</p>
+  &emsp;<p> :diamonds:Yeni Sahip Oluşturma</p><p>Yeni sahip bilgileri form içerisinde alındıktan sonra JPA save methodu call edilir ve veritabanına kayıt işlemi yapılır.</p>
     <img src="https://user-images.githubusercontent.com/36645298/196047543-44f11608-58fc-4a80-a44b-a9489657c81f.png" width="960" height="500" /><hr>
     
-  &emsp;<p> :diamonds:Sahip Güncelleme</p>
+  &emsp;<p> :diamonds:Sahip Güncelleme</p><p>Güncellenecek olan data seçildiğinde id'sine göre veri tabanında bir karşılaştırma yapılır ve yeni veriler JPA save methodu ile tekrar kaydedilir</p>
+  <p></p>
     <img src="https://user-images.githubusercontent.com/36645298/196047624-daaf59b0-f701-46eb-94d2-67e01e955e00.png" width="960" height="500" /><hr>
     
   &emsp;<p> :diamonds:Hakkımızda Sayfası</p>
