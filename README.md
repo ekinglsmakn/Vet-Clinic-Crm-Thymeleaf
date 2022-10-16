@@ -78,13 +78,33 @@
  
  <img src="https://user-images.githubusercontent.com/36645298/196045817-132b8371-1081-498c-a2d8-9dcec5d2e7eb.png" width="960" height="500" /><br>
  
-  &emsp; <p> :diamonds: Her evcil hayvanın bir sahibi olmak zorundadır. Ayrıntılı bilgilere hem evcil hayvan sayfası incele butonundan, hem de sahip listesi sayfasındaki incele butonundan ulaşılabilmektedir. </p><br>
+  &emsp; <p> :diamonds: Her evcil hayvanın bir sahibi olmak zorundadır. Ayrıntılı bilgilere hem evcil hayvan sayfası incele butonundan, hem de sahip listesi sayfasındaki incele butonundan ulaşılabilmektedir. </p>
  
-   <img src="https://user-images.githubusercontent.com/36645298/196046129-149bca02-4b37-422d-8b24-e525013267aa.png" width="960" height="500" /><br><br><br>
-   <img src="https://user-images.githubusercontent.com/36645298/196046164-2f545009-5ad0-4534-a97d-1233ebc9ae68.png" width="960" height="500" /><br>
+   <img src="https://user-images.githubusercontent.com/36645298/196046129-149bca02-4b37-422d-8b24-e525013267aa.png" width="960" height="500" /><br><br>
+   <img src="https://user-images.githubusercontent.com/36645298/196046164-2f545009-5ad0-4534-a97d-1233ebc9ae68.png" width="960" height="500" />
    
-   &emsp;<p> :diamonds: Eğer evcil hayvan eklenmiş fakat sahip ataması yapılmamışsa (sistemde sahipsiz görünüyorsa) incele butonuna tıklandığında aşağıdaki sayfa görüntülenecektir. </p><br>
-   <img src="https://user-images.githubusercontent.com/36645298/196046183-9eb73ab5-48ca-4bbb-bda8-88584c8d6e15.png" width="960" height="500" /><br>
+   &emsp;<p> :diamonds: Eğer evcil hayvan eklenmiş fakat sahip ataması yapılmamışsa (sistemde sahipsiz görünüyorsa) incele butonuna tıklandığında aşağıdaki sayfa görüntülenecektir. </p>
+   <img src="https://user-images.githubusercontent.com/36645298/196046183-9eb73ab5-48ca-4bbb-bda8-88584c8d6e15.png" width="960" height="500" /><hr>
+   
+  &emsp;<p> :diamonds:Yeni Evcil Hayvan Oluşturma </p>
+    <img src="https://user-images.githubusercontent.com/36645298/196047259-b64e2147-2537-46f1-866a-77ada6f29179.png" width="960" height="500" /><hr>
+    
+    
+  &emsp;<p> :diamonds:Var Olan Evcil Hayvanı Güncelleme</p>
+    <img src="https://user-images.githubusercontent.com/36645298/196047311-6ed1de6e-464e-4836-ad44-8b72350c5906.png" width="960" height="500" /><hr>
+    
+  &emsp;<p> :diamonds:Yeni Sahip Oluşturma</p>
+    <img src="https://user-images.githubusercontent.com/36645298/196047543-44f11608-58fc-4a80-a44b-a9489657c81f.png" width="960" height="500" /><hr>
+    
+  &emsp;<p> :diamonds:Sahip Güncelleme</p>
+    <img src="https://user-images.githubusercontent.com/36645298/196047624-daaf59b0-f701-46eb-94d2-67e01e955e00.png" width="960" height="500" /><hr>
+    
+  &emsp;<p> :diamonds:Hakkımızda Sayfası</p>
+    <img src="https://user-images.githubusercontent.com/36645298/196047661-caa538c0-7d85-4b39-aa43-a8f6aae822bc.png" width="960" height="500" /><hr>
+ 
+
+    
+
 
 
 
