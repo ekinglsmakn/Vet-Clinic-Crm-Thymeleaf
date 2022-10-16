@@ -50,6 +50,7 @@
  <p>Spring Security ayarları için öncelikle <i>"pom.xml"</i> içine gerekli dependency'ler eklenmelidir. Gerekli configurasyon ayarları <i>"SecurityConfiguration"</i> klasörü altında <i>"WebSecurityConfig"</i> classı içinde yapılmıştır.</p>
  
  <hr/>
+ <br>
  
  <h3>Ana Sayfa</h3>
  <p>Ana Sayfada giriş yapan kullanıcının sahip olduğu kullanıcı adı ve rolü görünmektedir.</p>
@@ -61,7 +62,35 @@
   :diamonds: <b>User</b> rolüne sahip kullanıcının giriş yaptığı ana sayfa
   
   <img src="https://user-images.githubusercontent.com/36645298/196039541-ae655355-e578-41a9-b38e-e198e7c9e66b.png" width="960" height="520" />
+  <hr/>
+  <br>
   
+  <h3>Evcil Hayvan Sayfası</h3>
+ <p>Menu bar yapısında bulunan <i> "Hayvan Listesi"</i> linki ile ulaşılan evcil hayvan sayfasında, veritabanında kayıtlı bulunan evcil hayvanlar listelenmektedir. Tabloda bulunan <i>"İncele"</i> butonu hariç; <i>"Kayıt Ekle", "Güncelle", "Sil"</i> butonları yalnızca <b>ADMIN</b> yetkisine sahip kullanıcılar tarafından görülebilmektedir. Sisteme <b>USER</b> olarak giriş yapan bir kişi bu butonlardan sadece <i>"İncele"</i> butonunu görebilmektedir. Bu durumda User olarak kimlik doğrulama yapan kişi ayrıntılı hayvan bilgilerine ulaşabilecek fakat ekleme, güncelleme ve silme işlemleri yapamayacaktır. </p>
+ 
+ <img src="https://user-images.githubusercontent.com/36645298/196045356-9124f8ec-8b58-44b6-97ab-53e5d66689d2.png" width="960" height="520" />
+ 
+  <hr/>
+  <br>
+  
+   <h3>Sahip Sayfası</h3>
+ <p>Menu bar yapısında bulunan <i> "Sahip Listesi"</i> linki ile ulaşılabilmektedir. bu sayfada veri tabanından çekilen evcil hayvan sahiplerinin bilgileri yer almaktadır. Bu sayfada da yetki bazlı işlemler bulunmaktadır. Tabloda bulunan <i>"İncele"</i> butonu hariç; <i>"Kayıt Ekle", "Güncelle", "Sil"</i> butonları yalnızca <b>ADMIN</b> yetkisine sahip kullanıcılar tarafından görülebilmektedir. Sisteme <b>USER</b> olarak giriş yapan bir kişi bu butonlardan sadece <i>"İncele"</i> butonunu görebilmektedir. Bu durumda User olarak kimlik doğrulama yapan kişi ayrıntılı hayvan bilgilerine ulaşabilecek fakat ekleme, güncelleme ve silme işlemleri yapamayacaktır. </p>
+ 
+ <img src="https://user-images.githubusercontent.com/36645298/196045817-132b8371-1081-498c-a2d8-9dcec5d2e7eb.png" width="960" height="520" /><br>
+ 
+  &emsp; <p> :diamonds: Her evcil hayvanın bir sahibi olmak zorundadır. Ayrıntılı bilgilere hem evcil hayvan sayfası incele butonundan, hem de sahip listesi sayfasındaki incele butonundan ulaşılabilmektedir. </p><br>
+ 
+   <img src="https://user-images.githubusercontent.com/36645298/196046129-149bca02-4b37-422d-8b24-e525013267aa.png" width="960" height="520" /><br><br><br>
+   <img src="https://user-images.githubusercontent.com/36645298/196046164-2f545009-5ad0-4534-a97d-1233ebc9ae68.png" width="960" height="520" /><br>
+   
+   &emsp;<p> :diamonds: Eğer evcil hayvan eklenmiş fakat sahip ataması yapılmamışsa (sistemde sahipsiz görünüyorsa) incele butonuna tıklandığında aşağıdaki sayfa görüntülenecektir. </p><br>
+   <img src="https://user-images.githubusercontent.com/36645298/196046183-9eb73ab5-48ca-4bbb-bda8-88584c8d6e15.png" width="960" height="520" /><br>
+
+
+
+   
+ 
+
  
 
 
