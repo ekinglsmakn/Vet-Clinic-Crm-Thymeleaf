@@ -77,6 +77,7 @@
   
   
   &emsp;&emsp; :diamonds: <b>USER</b> rolüne sahip kullanıcı tarafından görüntülenen evcil hayvan ve sahip sayfaları (Sil Butonunu göremezler)
+  &emsp;&emsp;
   
   <img src="https://user-images.githubusercontent.com/36645298/196271411-7494767f-e809-4333-97d9-344e89dea7f1.png" width="880" height="450" />
   <img src="https://user-images.githubusercontent.com/36645298/196271468-856cd3bf-3ff4-4d7b-881a-a79a55ce90d2.png" width="880" height="450" />
