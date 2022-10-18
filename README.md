@@ -130,7 +130,8 @@
   
    &emsp;&emsp; <p> :diamonds: Evcil Hayvanı isme göre arama;</p>
   <img src="https://user-images.githubusercontent.com/36645298/196546727-0d8517e5-80f5-4dd4-9e4e-1f063bad99c5.png" width="1000" height="530"  />
-  <img src="https://user-images.githubusercontent.com/36645298/196548055-e020d50f-f693-4aac-8a1d-54ce106e10c4.png" width="1000" height="530"  />
+  <img src="https://user-images.githubusercontent.com/36645298/196552821-9c66d66a-4303-49c9-9608-37f849ac36bd.png" width="1000" height="530"  />
+ 
   
    &emsp;&emsp; <p>  :diamonds: Hayvan Sahibini isme göre arama;</p>
    <img src="https://user-images.githubusercontent.com/36645298/196547926-5b3755a9-169e-422d-a4e4-ed0154461004.png" width="1000" height="530"  />
