@@ -18,9 +18,11 @@
  </ul>
 
 <h3>Proje Nasıl Çalışır?</h3>
-<p>Projede Java 8 ve JDK 1.8 ile çalışılmıştır. Dolayısıyla JDK 1.8'in bilgisayarda kurulu olduğundan emin olmak gerekmektedir. Ayrıca PostgreSql Veri tabanı gerekmektedir. Projenin veri tabanı backup'ı aşağıda verilmiştir. Uygulama ayağa kaldırılmadan önce login ile giriş yapabilmek için backup'ın bir veri tabanı oluşturulup, oluşturulan veri tabanına restore edilmesi gerekmektedir.</p>
+<p>Projede Java 8 ve JDK 1.8 ile çalışılmıştır. Dolayısıyla JDK 1.8'in bilgisayarda kurulu olduğundan emin olmak gerekmektedir. Ayrıca PostgreSql Veri tabanı gerekmektedir. Projenin veri tabanı backup'ı aşağıda verilmiştir. Uygulama ayağa kaldırılmadan önce login ile giriş yapabilmek için bir veri tabanı oluşturulup, indirilen "<i>vetClinicCrm.sql</i>" isimli backup'ın, oluşturulan veri tabanına restore edilmesi gerekmektedir.</p>
 
-<a href="" download>Veri Tabanını indirmek için tıklayınız</a>
+<a href="https://github.com/ekinglsmakn/Vet-Clinic-Crm-Thymeleaf/blob/ac93266e166fe5bd1ff565209a48f74a001443a3/VetClinicCrm.sql" download>Veri Tabanını indirmek için tıklayınız</a>
+
+
 
  <hr>
 
