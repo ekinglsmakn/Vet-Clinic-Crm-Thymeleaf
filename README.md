@@ -80,24 +80,23 @@
   &emsp;&emsp;
   
   <img src="https://user-images.githubusercontent.com/36645298/196271411-7494767f-e809-4333-97d9-344e89dea7f1.png" width="1000" height="530"  />
-  <img src="https://user-images.githubusercontent.com/36645298/196271468-856cd3bf-3ff4-4d7b-881a-a79a55ce90d2.png" width="1000" height="530"  />
+  <img src="https://user-images.githubusercontent.com/36645298/196271468-856cd3bf-3ff4-4d7b-881a-a79a55ce90d2.png" width="1000" height="530"  /><br><br>
   
-
+  <p><b>USER</b> rolüne sahip kullanıcılar menude yer alan (navbarda yer alan) <i>"Kullanıcılar"</i> sayfasına da erişemezler. Sistemdeki kayıtlı kullanıcılar ancak <b>ADMIN</b> rolüne sahip kullanıcılar görebilmektedirler. User rolündeki kullanıcı menudeki <i>"Kullanıcılar"</i> linkine tıklarsa "<i>"Access Denied"</i>" sayfasına yönlendirilirler. Bu sayfa 403 hatasının spring security ile customize edilmesi ile elde edilmiştir.</p>
   
-
-
-
- 
+   &emsp;&emsp; :diamonds: <b>USER</b> rolüne sahip kullanıcı tarafından görüntülenen menudeki <i>"Kullanıcılar"</i> linki<br>
+    &emsp;&emsp;
+   <img src="https://user-images.githubusercontent.com/36645298/196540240-3b0f7bb2-853c-4cfc-81c0-953f248d4caf.png" width="1000" height="530"  /><hr><br>
+   
+   
   
-  
-  
- 
-  &emsp; <p> :diamonds: Her evcil hayvanın bir sahibi olmak zorundadır. Ayrıntılı bilgilere hem evcil hayvan sayfası incele butonundan, hem de sahip listesi sayfasındaki incele butonundan ulaşılabilmektedir. </p>
+ <h3>Evcil Hayvan - Sahip İlişkisi </h3>
+  &emsp; <p> :diamonds: Her evcil hayvanın bir sahibi olmak zorundadır. Ayrıntılı bilgilere hem evcil hayvan sayfasındaki <i>İncele</i> butonundan, hem de sahip listesi sayfasındaki <i>İncele</i> butonundan ulaşılabilmektedir. </p>
  
    <img src="https://user-images.githubusercontent.com/36645298/196046129-149bca02-4b37-422d-8b24-e525013267aa.png" width="1000" height="530"   /><br><br>
    <img src="https://user-images.githubusercontent.com/36645298/196046164-2f545009-5ad0-4534-a97d-1233ebc9ae68.png" width="1000" height="530"   />
    
-   &emsp;<p> :diamonds: Eğer evcil hayvan eklenmiş fakat sahip ataması yapılmamışsa (sistemde sahipsiz görünüyorsa) incele butonuna tıklandığında aşağıdaki sayfa görüntülenecektir. </p>
+   &emsp;<p> :diamonds: Eğer evcil hayvan eklenmiş fakat sahip ataması yapılmamışsa (sistemde sahipsiz görünüyorsa) incele butonuna tıklandığında aşağıdaki sayfa görüntülenecektir. Çünkü uygulamada kurulan mimariye göre her evcil hayvanın sahibi olmak zorundadır.</p>
    <img src="https://user-images.githubusercontent.com/36645298/196046183-9eb73ab5-48ca-4bbb-bda8-88584c8d6e15.png" width="1000" height="530"   /><hr>
    
   &emsp;<p> :diamonds:Yeni Evcil Hayvan Oluşturma </p><p>JPA save methodu ile oluşturulan kaydetme işlemidir.Form içerisinde evcil hayvan bilgileri alındıktan sonra <i>PetOwner</i> bilgileri açılır menu içerisinde listelenip sahip seçimi yapılmaktadır. Seçilen Sahibin id'si <i>Pet</i> tablosunda foreign key olduğu için evcil hayvanın sahibi de atanmış olmaktadır.</p>
