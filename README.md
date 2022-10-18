@@ -48,7 +48,14 @@
  <p>Spring Security'nin sağladığı default login sayfası customize edilerek aşağıdaki Login Sayfası oluşturulmuştur. Bu sayfaya uygulama ayağa kaldırıldıktan sonra web browser üzerinden <i><b>"http://localhost:8080/login"</b></i> url'i ile ulaşılabilmektedir.</p>
  
  <img src="https://user-images.githubusercontent.com/36645298/196038614-c3c8b7ca-8767-4932-ada8-8a3f699be978.png" width="1000" height="530"  />
- <p>Spring Security ayarları için öncelikle <i>"pom.xml"</i> içine gerekli dependency'ler eklenmelidir. Gerekli configurasyon ayarları <i>"SecurityConfiguration"</i> klasörü altında <i>"WebSecurityConfig"</i> classı içinde yapılmıştır.</p>
+ <p>Spring Security ayarları için öncelikle <i>"pom.xml"</i> içine gerekli dependency'ler eklenmelidir. Gerekli configurasyon ayarları <i>"SecurityConfiguration"</i> klasörü altında <i>"WebSecurityConfig"</i> classı içinde yapılmıştır.</p><br>
+ <p>Sistemde toplamda 2 adet giriş yapabilen kullanıcı tanımlanmıştır. Bunlardan bir tanesi ADMIN, diğeri ise USER rolüne sahiptir. Sisteme e-mail ve parola ile giriş yapılmaktadır. Tanımlanan kullanıcı bilgileri veri tabanından çekilmektedir. Parolalar veri tabanında BCryptPasswordEncoder ile hashlenerek saklanmıştır.</p>
+ 
+ <ul>
+ <li><b>E-mail : </b> "admin@admin.com"  ,  <b>Parola : </b> "admin123" , <b>Rol : </b> ADMIN ,  <b>UserName : </b> <i>admin</i> </li>
+ <li><b>E-mail : </b> "user@user.com"  ,  <b>Parola : </b> "user123" , <b>Rol : </b> USER ,  <b>UserName : </b> <i>ekin</i></li> 
+
+ </ul><br>
  
  <hr/>
 
