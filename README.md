@@ -134,12 +134,15 @@
   
    &emsp;&emsp; <p>  :diamonds: Hayvan Sahibini isme göre arama;</p>
    <img src="https://user-images.githubusercontent.com/36645298/196547926-5b3755a9-169e-422d-a4e4-ed0154461004.png" width="1000" height="530"  />
-   <img src="https://user-images.githubusercontent.com/36645298/196548127-f874b417-13f3-4368-9a7a-aacdfe2419ec.png" width="1000" height="530"  /><hr><br>
-   
+   <img src="https://user-images.githubusercontent.com/36645298/196548127-f874b417-13f3-4368-9a7a-aacdfe2419ec.png" width="1000" height="530"  /><hr>
 
-    
   &emsp;<p> :diamonds:Hakkımızda Sayfası</p>
     <img src="https://user-images.githubusercontent.com/36645298/196047661-caa538c0-7d85-4b39-aa43-a8f6aae822bc.png" width="1000" height="530"   /><hr>
+    
+  <p>Teşekkürler, Bol Kodlu Günler😎 </p>
+  <img src="https://user-images.githubusercontent.com/36645298/196552375-11881318-6c91-442e-9b9b-0633278c5738.gif" width="250" height="200"   />
+
+
  
 
     
