@@ -1,8 +1,10 @@
 
  <h2><b>Vet Clinic CRM </b></h2>
-<p>Bu proje veteriner klinik işlemleri için geliştirilmiştir. Rol tabanlı bir yetkilendirme yapısı bulunmaktadır. Tanımlanan yetkiye göre sisteme, evcil hayvan sahibi veya evcil hayvan eklenebilmektedir. Var olan kayıtlar üzerinde güncelleme yapılabilir, silinebilir ve incelenebilir. Ayrıca evcil hayvan adı ya da hayvan sahibi adı üzerinden arama yapılabilmektedir. Tüm bu işlemler için Spring Data JPA CRUD methodları örnkelenmiştir. Uygulama 8080 portunda çalışmaktadır.</p>
+<p>Bu proje veteriner klinik işlemleri için geliştirilmiştir. Rol tabanlı bir yetkilendirme yapısı bulunmaktadır. Tanımlanan yetkiye göre sisteme, evcil hayvan sahibi veya evcil hayvan eklenebilmektedir. Var olan kayıtlar üzerinde güncelleme yapılabilir, silinebilir ve incelenebilir <i>(CRUD Methods)</i>. Ayrıca evcil hayvan adı ya da hayvan sahibi adı üzerinden arama yapılabilmektedir.  Uygulama 8080 portunda çalışmaktadır.🎉
+ </p>
 
 <h4>Uygulamada Kullanılan Teknolojiler</h4>
+ <p>👩‍💻 Kullanılan IDE : Intellij IDEA </p>
 <ul>
    <li>Java Spring Boot</li>
    <li>Spring Security</li>
@@ -14,6 +16,7 @@
    <li>Html/Css</li>
    <li>Hibernate</li>
  </ul>
+
  <hr>
 
  
@@ -52,8 +55,9 @@
  <p>Sistemde toplamda 2 adet giriş yapabilen kullanıcı tanımlanmıştır. Bunlardan bir tanesi ADMIN, diğeri ise USER rolüne sahiptir. Sisteme e-mail ve parola ile giriş yapılmaktadır. Tanımlanan kullanıcı bilgileri veri tabanından çekilmektedir. Parolalar veri tabanında BCryptPasswordEncoder ile hashlenerek saklanmıştır.</p>
  
  <ul>
- <li><b>E-mail : </b> "admin@admin.com"  ,  <b>Parola : </b> "admin123" , <b>Rol : </b> ADMIN ,  <b>UserName : </b> <i>admin</i> </li>
- <li><b>E-mail : </b> "user@user.com"  ,  <b>Parola : </b> "user123" , <b>Rol : </b> USER ,  <b>UserName : </b> <i>ekin</i></li> 
+ <li><b>E-mail : </b> "admin@admin.com"  ,  <b>Parola : </b> "admin123" , <b>Rol : </b> ADMIN ,  <b>UserName : </b> <i>"admin"</i> </li>
+ <li><b>E-mail : </b> "user@user.com"  ,  <b>Parola : </b> "user123" , <b>Rol : </b> USER ,  <b>UserName : </b> <i>"ekin"</i></li> 
+ <li><b>URL --> </b>"http://localhost:8080/login" ya da  "http://localhost:8080"</li>
 
  </ul><br>
  
