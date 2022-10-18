@@ -1,6 +1,6 @@
 
  <h2><b>Vet Clinic CRM </b></h2>
-<p>Bu proje veteriner klinik işlemleri için geliştirilmiştir. Rol tabanlı bir yetkilendirme yapısı bulunmaktadır. Tanımlanan yetkiye göre sisteme, evcil hayvan sahibi veya evcil hayvan eklenebilmektedir. Var olan kayıtlar üzerinde güncelleme yapılabilir, silinebilir ve incelenebilir. Ayrıca evcil hayvan adı ya da hayvan sahibi adı üzerinden arama yapılabilmektedir. Uygulama 8080 portunda çalışmaktadır</p>
+<p>Bu proje veteriner klinik işlemleri için geliştirilmiştir. Rol tabanlı bir yetkilendirme yapısı bulunmaktadır. Tanımlanan yetkiye göre sisteme, evcil hayvan sahibi veya evcil hayvan eklenebilmektedir. Var olan kayıtlar üzerinde güncelleme yapılabilir, silinebilir ve incelenebilir. Ayrıca evcil hayvan adı ya da hayvan sahibi adı üzerinden arama yapılabilmektedir. Tüm bu işlemler için Spring Data JPA CRUD methodları örnkelenmiştir. Uygulama 8080 portunda çalışmaktadır.</p>
 
 <h4>Uygulamada Kullanılan Teknolojiler</h4>
 <ul>
@@ -70,7 +70,7 @@
   :diamonds: <b>User</b> rolüne sahip kullanıcının giriş yaptığı ana sayfa
   
   <img src="https://user-images.githubusercontent.com/36645298/196039541-ae655355-e578-41a9-b38e-e198e7c9e66b.png" width="1000" height="530"   />
-  <hr/>
+  <hr/><br>
  
  
   <h3>Yetkilendirme ( Rol Bazlı Sistem )</h3>
@@ -118,7 +118,21 @@
     
   &emsp;<p> :diamonds:Sahip Güncelleme</p><p>Güncellenecek olan data seçildiğinde id'sine göre veri tabanında bir karşılaştırma yapılır ve yeni veriler JPA save methodu ile tekrar kaydedilir</p>
   <p></p>
-    <img src="https://user-images.githubusercontent.com/36645298/196047624-daaf59b0-f701-46eb-94d2-67e01e955e00.png" width="1000" height="530"  /><hr>
+    <img src="https://user-images.githubusercontent.com/36645298/196047624-daaf59b0-f701-46eb-94d2-67e01e955e00.png" width="1000" height="530"  /><hr><br>
+    
+    
+  <h3>İsme Göre Arama Yapma </h3>
+  <p> Evcil Hayvan sayfasında hayvanın ismine göre arama yapılabilmektedir. Navbar menude bulunan search inputuna büyük-küçük harf farketmeksizin evcil hayvan adı yazarak arama işlemi gerçekleştirilir. Aynı şekilde Sahip sayfasında da search inputuna (ignoreCase) sahip adı yazarak arama yapılabilmektedir.</p>
+  
+   &emsp;&emsp; <p> :diamonds: Evcil Hayvanı isme göre arama;</p>
+  <img src="https://user-images.githubusercontent.com/36645298/196546727-0d8517e5-80f5-4dd4-9e4e-1f063bad99c5.png" width="1000" height="530"  />
+  <img src="https://user-images.githubusercontent.com/36645298/196548055-e020d50f-f693-4aac-8a1d-54ce106e10c4.png" width="1000" height="530"  />
+  
+   &emsp;&emsp; <p>  :diamonds: Hayvan Sahibini isme göre arama;</p>
+   <img src="https://user-images.githubusercontent.com/36645298/196547926-5b3755a9-169e-422d-a4e4-ed0154461004.png" width="1000" height="530"  />
+   <img src="https://user-images.githubusercontent.com/36645298/196548127-f874b417-13f3-4368-9a7a-aacdfe2419ec.png" width="1000" height="530"  /><hr><br>
+   
+
     
   &emsp;<p> :diamonds:Hakkımızda Sayfası</p>
     <img src="https://user-images.githubusercontent.com/36645298/196047661-caa538c0-7d85-4b39-aa43-a8f6aae822bc.png" width="1000" height="530"   /><hr>
