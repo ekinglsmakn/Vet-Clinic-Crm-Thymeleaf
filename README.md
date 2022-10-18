@@ -3,7 +3,7 @@
 <p>Bu proje veteriner klinik işlemleri için geliştirilmiştir. Rol tabanlı bir yetkilendirme yapısı bulunmaktadır. Tanımlanan yetkiye göre sisteme, evcil hayvan sahibi veya evcil hayvan eklenebilmektedir. Var olan kayıtlar üzerinde güncelleme yapılabilir, silinebilir ve incelenebilir <i>(CRUD Methods)</i>. Ayrıca evcil hayvan adı ya da hayvan sahibi adı üzerinden arama yapılabilmektedir.  Uygulama 8080 portunda çalışmaktadır.🎉
  </p>
 
-<h4>Uygulamada Kullanılan Teknolojiler</h4>
+<h4>Uygulamada Kullanılan Teknolojiler;</h4>
  <p>👩‍💻 Kullanılan IDE : Intellij IDEA </p>
 <ul>
    <li>Java Spring Boot</li>
@@ -16,6 +16,11 @@
    <li>Html/Css</li>
    <li>Hibernate</li>
  </ul>
+
+<h3>Proje Nasıl Çalışır?</h3>
+<p>Projede Java 8 ve JDK 1.8 ile çalışılmıştır. Dolayısıyla JDK 1.8'in bilgisayarda kurulu olduğundan emin olmak gerekmektedir. Ayrıca PostgreSql Veri tabanı gerekmektedir. Projenin veri tabanı backup'ı aşağıda verilmiştir. Uygulama ayağa kaldırılmadan önce login ile giriş yapabilmek için backup'ın bir veri tabanı oluşturulup, oluşturulan veri tabanına restore edilmesi gerekmektedir.</p>
+
+<a href="" download>Veri Tabanını indirmek için tıklayınız</a>
 
  <hr>
 
