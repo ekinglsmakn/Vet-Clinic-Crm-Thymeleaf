@@ -15,7 +15,7 @@
         <div>
             <h3 style="text-align: left; padding-top: 12px; padding-bottom: 3px">Evcil Hayvan Sahibi Listesi</h3><hr>
 
-            <div  sec:authorize="hasAnyAuthority('ADMIN')">
+            <div  sec:authorize="hasAnyAuthority('ADMIN','USER')">
                 <a th:href="@{/owner/new}" class="btn btn-primary">Kayıt Ekle</a>
             </div>
 
@@ -51,23 +51,19 @@
                         </div>
                     </td>
                     <td>
-                        <div sec:authorize="hasAnyAuthority('ADMIN')">
+                        <div sec:authorize="hasAnyAuthority('ADMIN','USER')">
                             <a th:href="@{'/owners/edit/' + ${owner.id}}" class="btn btn-primary">
                                 Güncelle
                             </a>
                         </div>
                     </td>
                     <td>
-                        <div sec:authorize="hasAnyAuthority('ADMIN')">
+                        <div sec:authorize="hasAnyAuthority('ADMIN')">   <!--only admin can delete data-->
                             <a th:href="@{'/owners/delete/' + ${owner.id}}" class="btn btn-primary">
                                 Sil
                             </a>
                         </div>
                     </td>
-
-<!--                    <td><a th:href="@{'/owners/detail/' +${owner.id}}" class="btn btn-primary">İncele</a></td>-->
-<!--                    <td><a th:href="@{'/owners/edit/' + ${owner.id}}" class="btn btn-primary" style="background-color: lightseagreen">Güncelle</a></td>-->
-<!--                    <td><a th:href="@{'/owners/delete/' + ${owner.id}}" class="btn btn-primary" style="background-color: palevioletred; padding-right: 20px; padding-left: 20px"> Sil</a></td>-->
                 <tr>
                 </tbody>
             </table>

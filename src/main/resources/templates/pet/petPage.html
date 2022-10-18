@@ -18,8 +18,7 @@
 <div class="container">
     <h3 style="text-align: left; padding-top: 12px; padding-bottom: 3px">Evcil Hayvan Listesi</h3><hr>
 
-    <div sec:authorize="hasAnyAuthority('ADMIN')">
-
+    <div sec:authorize="hasAnyAuthority('ADMIN','USER')">
         <a th:href="@{/pet/new}" class="btn btn-primary">Kayıt Ekle</a>
     </div>
     <br>
@@ -54,14 +53,14 @@
                     </div>
                 </td>
                 <td>
-                    <div sec:authorize="hasAnyAuthority('ADMIN')">
+                    <div sec:authorize="hasAnyAuthority('ADMIN','USER')">
                         <a th:href="@{'/pet/edit/' + ${pet.id}}" class="btn btn-primary">
                             Güncelle
                         </a>
                     </div>
                 </td>
                 <td>
-                    <div sec:authorize="hasAnyAuthority('ADMIN')">
+                    <div sec:authorize="hasAnyAuthority('ADMIN')">  <!--only admin can delete data-->
                         <a th:href="@{'/pet/delete/' + ${pet.id}}" class="btn btn-primary">
                             Sil
                         </a>

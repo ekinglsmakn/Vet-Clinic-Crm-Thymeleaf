@@ -31,22 +31,4 @@ public class UserController {
         return "user/userPage";
     }
 
-    @GetMapping("/user/new")
-    public String showNewUserPage(Model model){
-        User user = new User();
-        model.addAttribute("user",user);
-        List<Role> roles = this.rolesService.getAll();
-        model.addAttribute("roleList",roles);
-        return "user/newUserPage";
-    }
-
-    @PostMapping("/user/save")
-    public String saveUser(@ModelAttribute("user") User user){
-//        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-//        String newpassword = passwordEncoder.encode(user.getPassword());
-//        user.setPassword(newpassword);
-        this.userService.saveUser(user);
-        return "redirect:/user/listusers";
-    }
-
 }
