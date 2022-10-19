@@ -142,7 +142,13 @@
   
    &emsp;&emsp; <p>  :diamonds: Hayvan Sahibini isme göre arama;</p>
    <img src="https://user-images.githubusercontent.com/36645298/196547926-5b3755a9-169e-422d-a4e4-ed0154461004.png" width="1000" height="530"  />
-   <img src="https://user-images.githubusercontent.com/36645298/196548127-f874b417-13f3-4368-9a7a-aacdfe2419ec.png" width="1000" height="530"  /><hr>
+   <img src="https://user-images.githubusercontent.com/36645298/196548127-f874b417-13f3-4368-9a7a-aacdfe2419ec.png" width="1000" height="530"  /><hr><br>
+   
+   <h3>Kullanıcılar Sayfası </h3>
+   <p>Sistemde kayıtlı olan kullanıcılar veritabanından çekilerek listelenmektedir. Kullanıcı silme ve yeni kullanıcı ekleme işlemi yapılabilmektedir. Bu sayfayı yalnızca <b>ADMIN</b> rolüne sahip kullanıcılar görebilir ve kullanabilir. Yeni kullanıcı oluşturulurken girilen paralola UserControllerda hashlenerek veri tabanına bu şekilde kaydedilmektedir. </p>
+   <img src="https://user-images.githubusercontent.com/36645298/196690645-52359d98-1b3d-48b1-8ce2-6a221f9c1f57.png" width="1000" height="530"  />
+   <img src="https://user-images.githubusercontent.com/36645298/196690850-2a57df85-138e-4c5e-adb2-bcd457523e9f.png" width="1000" height="530"  />
+  
 
   &emsp;<p> :diamonds:Hakkımızda Sayfası</p>
     <img src="https://user-images.githubusercontent.com/36645298/196047661-caa538c0-7d85-4b39-aa43-a8f6aae822bc.png" width="1000" height="530"   /><hr>
