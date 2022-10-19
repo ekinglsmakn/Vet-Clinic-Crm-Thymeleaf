@@ -148,7 +148,7 @@
     <img src="https://user-images.githubusercontent.com/36645298/196047661-caa538c0-7d85-4b39-aa43-a8f6aae822bc.png" width="1000" height="530"   /><hr>
     
   <p>Teşekkürler, Bol Kodlu Günler😎 </p>
-  <img src="https://user-images.githubusercontent.com/36645298/196552375-11881318-6c91-442e-9b9b-0633278c5738.gif" width="250" height="200"   />
+  <img src="https://user-images.githubusercontent.com/36645298/196552375-11881318-6c91-442e-9b9b-0633278c5738.gif" width="200" height="150"   />
 
 
  
