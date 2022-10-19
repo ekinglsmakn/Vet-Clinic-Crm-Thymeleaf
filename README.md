@@ -59,7 +59,7 @@
  
  <img src="https://user-images.githubusercontent.com/36645298/196038614-c3c8b7ca-8767-4932-ada8-8a3f699be978.png" width="1000" height="530"  />
  <p>Spring Security ayarları için öncelikle <i>"pom.xml"</i> içine gerekli dependency'ler eklenmelidir. Gerekli configurasyon ayarları <i>"SecurityConfiguration"</i> klasörü altında <i>"WebSecurityConfig"</i> classı içinde yapılmıştır.</p><br>
- <p>Sistemde toplamda 2 adet giriş yapabilen kullanıcı tanımlanmıştır. Bunlardan bir tanesi ADMIN, diğeri ise USER rolüne sahiptir. Sisteme e-mail ve parola ile giriş yapılmaktadır. Tanımlanan kullanıcı bilgileri veri tabanından çekilmektedir. Parolalar veri tabanında BCryptPasswordEncoder ile hashlenerek saklanmıştır.</p>
+ <p>Sistemde default olarak 2 adet kullanıcı tanımlanmıştır. Bunlardan bir tanesi ADMIN, diğeri ise USER rolüne sahiptir. Sisteme e-mail ve parola ile giriş yapılmaktadır. Tanımlanan kullanıcı bilgileri veri tabanından çekilmektedir. Parolalar veri tabanında BCryptPasswordEncoder ile hashlenerek saklanmıştır.</p>
  
  <ul>
  <li><b>E-mail : </b> "admin@admin.com"  ,  <b>Parola : </b> "admin123" , <b>Rol : </b> ADMIN ,  <b>UserName : </b> <i>"admin"</i> </li>
