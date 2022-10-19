@@ -26,4 +26,10 @@ public class UsersServiceImp implements IUsersService {
     public List<User> getAllUsers() {
         return (List<User>) this.userRepository.findAll();
     }
+
+    @Transactional
+    @Override
+    public void deleteUser(Long id) {
+        this.userRepository.deleteById(id);
+    }
 }

@@ -19,7 +19,6 @@ public class Pet extends BaseEntity {
     private String statement;  //description about pet health
     private String gender;
 
-    // if the pet owner is deleted, the pet should also be deleted
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(updatable = false)

@@ -14,8 +14,9 @@
 <br>
 
 
-<div class="container">
+<div class="container-fluid">
     <h3 style="text-align: left; padding-top: 12px; padding-bottom: 3px">Kayıtlı Kullanıcı Listesi</h3><hr>
+    <a th:href="@{/user/new}" class="btn btn-primary">Kullanıcı Ekle</a>
 
     <table class="table table-striped" >
         <thead>
@@ -25,6 +26,7 @@
                 <th scope="col">Kullanıcı Adı</th>
                 <th scope="col">E-Posta</th>
                 <th scope="col"> Rol </th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -35,6 +37,9 @@
                 <td th:text="${usr.username}"></td>
                 <td th:text="${usr.email}"></td>
                 <td th:text=" ${rol.rolename}"></td>
+                <td><a th:href="@{'/user/delete/' + ${usr.id}}" class="btn btn-primary">
+                    Sil
+                </a></td>
             </tr>
         </th:block>
 

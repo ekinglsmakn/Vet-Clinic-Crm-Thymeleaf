@@ -12,50 +12,59 @@
 <body>
 <div th:replace="fragments/mainFragment :: menu"></div>
 
-<div class="container-fluid">
-<br>
-    <div  th:if="${user.id==null}"><h3 style="color: darkblue; text-align: center">Yeni Kullanıcı Ekle</h3></div>
-    <div  th:unless="${user.id==null}"><h3 style="color: darkblue; text-align: center"> Kullanıcı Güncelle</h3></div>
-    <div class="border border-secondary p-3 rounded">
-        <img th:src="@{/images/personicon.png}" th:width="50" th:height="70" style="margin-left: 700px"/>
+<div class="container-fluid"><br>
 
-        <form th:action="@{/user/save}" th:object="${user}" method="POST" style="max-width: 500px; margin: 0 auto;">
-                    <input type="hidden" th:field="*{id}" th:value="${user.id}">
-                    <div class="form-group">
-                        <label for="uName">Kullanıcı Adı</label>
-                        <input id="uName" type="text" th:field="*{username}" placeholder="userName" class="form-control mb-4 col-4" required>
-                    </div>
+        <img th:src="@{/images/personicon.png}" th:width="42" th:height="65" style="margin-left: 700px"/>
 
-                    <div class="form-group">
-                        <label for="email">E-Posta</label>
-                        <input id="email" type="text" th:field="*{email}"  placeholder="e-posta" class="form-control mb-4 col-4" required>
-                    </div>
+        <form action="#" th:action="@{/user/save}" th:object="${user}" method="POST" style="max-width: 500px; margin: 0 auto;">
 
-                    <div class="form-group">
-                        <label for="password">Parola</label>
-                        <input id="password" type="text" th:field="*{password}" placeholder="parola" class="form-control mb-4 col-4">
-                    </div>
+            <div class="form-group">
+                <label for="uName">Kullanıcı Adı</label>
+                <input id="uName" type="text" th:field="*{username}" placeholder="userName" class="form-control mb-4 col-4" required>
+            </div>
 
-                    <div class="form-group">
-                        <div><label>Rol Seçiniz</label></div>
-                        <div>
-                            <select th:field="*{roles}" class="form-control">
-                                <option th:value="0"  selected="selected" >Lütfen Rol Seçiniz</option>
+            <div class="form-group">
+                <label for="email">E-Posta</label>
+                <input id="email" type="text" th:field="*{email}"  placeholder="e-posta" class="form-control mb-4 col-4" required>
+            </div>
 
-                                <th:block th:each="rol : ${roleList}" >
-                                    <option  th:text="${rol.rolename}" th:value="${rol.id}"></option>
-                                </th:block>
-                            </select>
-                        </div>
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-info col-2" >KAYDET</button>
-                    <a class="btn btn-info col-2"
-                       style="background-color: crimson; margin-left: 325px; color: #F2F3F4 "
-                       th:href="@{/}">VAZGEÇ</a>
+            <div class="form-group">
+                <label for="password">Parola</label>
+                <input id="password" type="text" th:field="*{password}" placeholder="parola" class="form-control mb-4 col-4">
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:field="*{enable}" value="1" th:checked="${user.enable == 1} ? ${true}">
+                <label class="form-check-label" >
+                    Kullanıcıyı Aktifleştir
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" th:field="*{enable}" value="0" th:checked="${user.enable == 0} ? ${true}" checked>
+                <label class="form-check-label">
+                    Kullanıcıyı Aktifleştirme
+                    <i style="font-size: smaller">   (  Aktifleştirilmeyen kullanıcılar giriş yapamazlar... )</i>
+                </label>
+            </div><br>
+
+            <!--multiple roles can be selected--->
+
+            <label><b>Rol Seçiniz</b></label><br>
+            <div class="form-check form-check-inline">
+                <th:block th:each="rol : ${roleList}">
+                    <input class="form-check-input" type="checkbox" th:field="*{roles}"
+                           id="inlineCheckbox1" th:value="${rol.id}">
+                    <label class="form-check-label" for="inlineCheckbox1" th:text="${rol.rolename}"></label><br>
+                </th:block>
+            </div><br><br>
+
+            <button type="submit" class="btn btn-info col-2" >KAYDET</button>
+            <a class="btn btn-info col-2"
+               style="background-color: crimson; margin-left: 325px; color: #F2F3F4 "
+               th:href="@{/}">VAZGEÇ</a>
         </form>
+
     </div>
-<div th:replace="fragments/mainFragment::footer" ></div>
-</div>
+    <div th:replace="fragments/mainFragment::footer" ></div>
 </body>
 </html>

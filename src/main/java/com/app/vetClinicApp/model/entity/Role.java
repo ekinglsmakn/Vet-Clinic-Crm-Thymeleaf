@@ -18,7 +18,7 @@ public class Role {
     private String rolename;
     private boolean enable;
 
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "roles",cascade =CascadeType.REMOVE ,fetch = FetchType.LAZY)
     private List<User> users = new ArrayList<>();
 
 

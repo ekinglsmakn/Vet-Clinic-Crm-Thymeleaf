@@ -13,7 +13,7 @@
 <body>
 <div th:replace="fragments/petFragment :: searchMenu"></div><br>
 
-    <div class="container">
+    <div class="container-fluid">
         <div  th:if="${pet.id==null}"><h3 style="color: darkcyan; text-align: center">Yeni Evcil Hayvan Ekle</h3></div>
         <div  th:unless="${pet.id==null}"><h3 style="color: darkcyan; text-align: center"> Evcil Hayvan Güncelle</h3></div>
 

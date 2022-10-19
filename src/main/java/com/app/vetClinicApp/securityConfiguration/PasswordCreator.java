@@ -12,8 +12,7 @@ public class PasswordCreator {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
 //      String rawPassword= "admin123"; //username: admin (role:ADMIN)
-//      String rawPassword= "secret";  //username: user (role: USER)
-        String rawPassword = "java";  //username: ekin (role:ADMIN and USER)
+        String rawPassword = "user123";  //username: ekin (role:USER)
 
         String encodedPassword = passwordEncoder.encode(rawPassword);
         System.out.println(encodedPassword);
