@@ -12,7 +12,7 @@
 <div th:replace="fragments/ownerFragment :: searchMenu"></div>
 <br>
 
-    <div class="container">
+    <div class="container-fluid">
         <div  th:if="${owner.id==null}"><h3 style="color: maroon; text-align: center">Yeni Hayvan Sahibi Ekle</h3></div>
         <div  th:unless="${owner.id==null}"><h3 style="color: darkcyan; text-align: center"> Hayvan Sahibi Güncelle</h3></div>
 
@@ -51,7 +51,6 @@
                th:href="@{/}">VAZGEÇ</a>
         </form>
     </div>
-<br>
 <div th:replace="fragments/ownerFragment :: footer"></div>
 </body>
 </html>

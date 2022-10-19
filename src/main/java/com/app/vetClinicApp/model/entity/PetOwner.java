@@ -1,6 +1,5 @@
 package com.app.vetClinicApp.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 

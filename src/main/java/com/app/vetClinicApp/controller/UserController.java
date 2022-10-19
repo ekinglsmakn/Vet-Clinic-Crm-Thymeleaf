@@ -5,6 +5,7 @@ import com.app.vetClinicApp.model.entity.User;
 import com.app.vetClinicApp.service.IRolesService;
 import com.app.vetClinicApp.service.IUsersService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,6 +42,12 @@ public class UserController {
     //this is the save method
     @PostMapping("/user/save")
     public String saveUser(@ModelAttribute("user") User user) {
+
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String newPassword = user.getPassword();
+        String encodedPassword = passwordEncoder.encode(newPassword);
+        user.setPassword(encodedPassword);
+
         this.userService.saveUser(user); //save pet to dataBase
         return "redirect:/user/listusers";
     }
