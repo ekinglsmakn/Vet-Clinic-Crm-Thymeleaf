@@ -135,12 +135,12 @@
   <h3>İsme Göre Arama Yapma </h3>
   <p> Evcil Hayvan sayfasında hayvanın ismine göre arama yapılabilmektedir. Navbar menude bulunan search inputuna büyük-küçük harf farketmeksizin evcil hayvan adı yazarak arama işlemi gerçekleştirilir. Aynı şekilde Sahip sayfasında da search inputuna (ignoreCase) sahip adı yazarak arama yapılabilmektedir.</p>
   
-   &emsp;&emsp; <p> :diamonds: Evcil Hayvanı isme göre arama;</p>
+   &emsp;&emsp; <p> :diamonds: Evcil Hayvan ismine göre arama;</p>
   <img src="https://user-images.githubusercontent.com/36645298/196546727-0d8517e5-80f5-4dd4-9e4e-1f063bad99c5.png" width="1000" height="530"  />
   <img src="https://user-images.githubusercontent.com/36645298/196552821-9c66d66a-4303-49c9-9608-37f849ac36bd.png" width="1000" height="530"  />
  
   
-   &emsp;&emsp; <p>  :diamonds: Hayvan Sahibini isme göre arama;</p>
+   &emsp;&emsp; <p>  :diamonds: Sahip ismine göre arama;</p>
    <img src="https://user-images.githubusercontent.com/36645298/196547926-5b3755a9-169e-422d-a4e4-ed0154461004.png" width="1000" height="530"  />
    <img src="https://user-images.githubusercontent.com/36645298/196548127-f874b417-13f3-4368-9a7a-aacdfe2419ec.png" width="1000" height="530"  /><hr><br>
    
